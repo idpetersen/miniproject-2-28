@@ -1,0 +1,116 @@
+:root{
+    --outer-space: rgb(80, 80, 80);
+    --heliotrope: rgb(252, 71, 213);
+    --gin: white;
+}
+
+/* set content highlight color for background */
+::selection{
+    background-color: var(--heliotrope);
+    color: var(--gin);
+}
+
+html{
+    font-size: 50%;
+}
+
+h1,h2{
+    color: var(--heliotrope);
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    background-color: var(--outer-space);
+}
+
+h1{
+    font-size: 300%;
+}
+
+h2{
+    font-size: 250%;
+}
+
+header{
+    margin: 0;
+    padding: 2.5;
+    text-align: center;
+}
+
+header p{
+    color: var(--gin);
+}
+
+header h1.page-title{
+    padding: 1rem 1.2rem;
+    font-size: 4.5rem;
+}
+
+main{
+    width: 96%;
+    margin: 2rem auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.card-column{
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.code-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+    outline: 2px dashed var(--gin);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card .card-header{
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    border: 2px solid var(--gin);
+    border-radius: 10px;
+    transition: al 0.5s ease-in-out;
+}
+
+.code-card:hover,.code-card:hover .card-header{
+    box-shadow: inset 0px 0px 0px var(--heliotrope),
+    0 0 15px var(--heliotrope);
+}
+
+.code-card .code-block{
+    flex-grow: 1;
+
+}
+
+.code-card pre{
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    
+}
